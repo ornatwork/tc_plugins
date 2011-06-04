@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="lib/annotations.jar"/>
+	<classpathentry kind="lib" path="lib/common.jar"/>
+	<classpathentry kind="lib" path="lib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/messages.jar"/>
+	<classpathentry kind="lib" path="lib/openapi.jar"/>
+	<classpathentry kind="lib" path="lib/server-model.jar"/>
+	<classpathentry kind="lib" path="lib/server-openapi.jar"/>
+	<classpathentry kind="lib" path="lib/spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="lib/spring.jar"/>
+	<classpathentry kind="lib" path="lib/web-openapi.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j-core-2.2.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

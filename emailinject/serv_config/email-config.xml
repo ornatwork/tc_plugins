@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email SYSTEM "email-config.dtd">
+
+<email email-server="10.9.168.201" email-server-port="25" email-from="acsdev@deloitte.com" useSSL="false" email-login="orn.kristjansson" email-password="zxx4157e87ef157499cf6f09127c816e918">
+  <events>
+    <event type="build_started">
+      <ref template="build_started_tpl" />
+    </event>
+    <event type="build_failed">
+      <ref template="build_failed_tpl" />
+    </event>
+    <event type="build_failing">
+      <ref template="build_failing_tpl" />
+    </event>
+    <event type="build_probably_hanging">
+      <ref template="build_probably_hanging_tpl" />
+    </event>
+    <event type="build_successful">
+      <ref template="build_successful_tpl" />
+    </event>
+    <event type="responsible_changed">
+      <ref template="responsible_changed_tpl" />
+    </event>
+    <event type="responsible_assigned">
+      <ref template="responsible_assigned_tpl" />
+    </event>
+    <event type="test_responsibility_changed">
+      <ref template="test_responsibility_changed_tpl" />
+    </event>
+    <event type="test_responsibility_assigned">
+      <ref template="test_responsibility_assigned_tpl" />
+    </event>
+  </events>
+  <templates>
+    <template id="build_started_tpl">
+      <subject>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} started.</subject>
+      <body>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} started.
+
+build info={EMAIL_MSG_INJECTION}
+
+Build results: {BUILD_RESULTS_LINK}
+
+{CHANGES}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="build_failing_tpl">
+      <subject>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} failing {SHORT_STATUS_DESCRIPTION}</subject>
+      <body>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} failing {SHORT_STATUS_DESCRIPTION}
+Agent: {AGENT_NAME}
+
+build info={EMAIL_MSG_INJECTION}
+
+Build results: {BUILD_RESULTS_LINK}
+
+{COMPILATION_ERRORS}{FAILED_TESTS_ERRORS}{CHANGES}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="build_probably_hanging_tpl">
+      <subject>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} is probably hanging {SHORT_STATUS_DESCRIPTION}</subject>
+      <body>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} is probably hanging {SHORT_STATUS_DESCRIPTION}
+Estimated duration: {BUILD_DURATION_ESTIMATE}, overtime: {BUILD_DURATION_OVERTIME}
+Last message was received on: {BUILD_LAST_MESSAGE_TIMESTAMP} ({BUILD_TIME_SINCE_LAST_MESSAGE} ago)
+Agent: {AGENT_NAME}
+
+build info={EMAIL_MSG_INJECTION}
+
+Build results: {BUILD_RESULTS_LINK}
+
+{CHANGES}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="build_failed_tpl">
+      <subject>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} failed {SHORT_STATUS_DESCRIPTION}</subject>
+      <body>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} failed {SHORT_STATUS_DESCRIPTION}
+Agent: {AGENT_NAME}
+
+build info={EMAIL_MSG_INJECTION}
+
+Build results: {BUILD_RESULTS_LINK}
+
+{COMPILATION_ERRORS}{FAILED_TESTS_ERRORS}{CHANGES}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="build_successful_tpl">
+      <subject>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} successful {SHORT_STATUS_DESCRIPTION}</subject>
+      <body>Build {PROJECT_NAME}::{BUILD_CONFIG_NAME} {BUILD_NUMBER} successful {SHORT_STATUS_DESCRIPTION}
+
+build info={EMAIL_MSG_INJECTION}
+
+Build results: {BUILD_RESULTS_LINK}
+
+{COMPILATION_ERRORS}{FAILED_TESTS_ERRORS}{CHANGES}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="responsible_changed_tpl">
+      <subject>Responsible for {PROJECT_NAME}::{BUILD_CONFIG_NAME} failure has been changed.</subject>
+      <body>Responsible for {PROJECT_NAME}::{BUILD_CONFIG_NAME} failure has been changed.
+Current responsible: {RESPONSIBLE}
+
+build info={EMAIL_MSG_INJECTION}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="responsible_assigned_tpl">
+      <subject>You are assigned responsible for {PROJECT_NAME}::{BUILD_CONFIG_NAME} build configuration</subject>
+      <body>You are assigned responsible for a build configuration failure.
+{PROJECT_NAME}::{BUILD_CONFIG_NAME}, assigned by {REPORTER_NAME} with comment '{RESPONSIBILITY_COMMENT}'
+{BUILD_CONFIG_LINK}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="test_responsibility_changed_tpl">
+      <subject>{TEST_NAME} responsibility has been changed</subject>
+      <body>Responsibility for a test has been changed: {TEST_NAME} ({PROJECT_NAME}),
+current responsible: {RESPONSIBLE_NAME}, assigned by {REPORTER_NAME} with comment '{RESPONSIBILITY_COMMENT}'
+{TEST_LINK}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+    <template id="test_responsibility_assigned_tpl">
+      <subject>You are assigned responsible for {TEST_NAME}</subject>
+      <body>You are assigned responsible for a test failure: {TEST_NAME} ({PROJECT_NAME}),
+assigned by {REPORTER_NAME} with comment '{RESPONSIBILITY_COMMENT}'
+{TEST_LINK}
+
+============================================================================
+Configure email notifications: {EDIT_NOTIFICATIONS_LINK}</body>
+    </template>
+  </templates>
+</email>
+

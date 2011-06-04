@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/web-openapi.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/annotations.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/common.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/messages.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/openapi.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/server-model.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/server-openapi.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/spring.jar"/>
+	<classpathentry kind="lib" path="C:/work/svn/ACS/trunk/tools/tc_plugin/unique/lib/spring-webmvc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
