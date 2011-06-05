@@ -3,7 +3,7 @@ package com.deloitte.acs;
 public class CxGlobal 
 {
 	// User
-	public static String TwitterName = "acsbuild";
+	public static String TwitterName = "yourAccount";
 	public static String TwitterPass = "yourPass";
 	
 	// Consumer 
