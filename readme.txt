@@ -29,6 +29,6 @@ All the jars pretty much work the same, here is the gist of it
   *** UniqueBuildnumber adding listener=com.deloitte.acs.UniqueBuildNumber@ca8f43
 
 4. Configure each project for the unique plugin, the plugin will examine each build number and 
-  only replace the build / compile number for those marked unique.  Example 1.5.0.{unique}
+  only replace the build / compile number for those marked {unique}  Example 1.5.0.{unique}
   
   
