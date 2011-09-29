@@ -8,7 +8,7 @@ All the jars pretty much work the same, here is the gist of it
 Created - 7/2008
 -------------
 1. Jar the classess and descriptor file ( uniquebuildnumber.jar )
-    \com\bearingpoint\acs\*.class etc
+    \com\deloitte\acs\*.class etc
     \META-INF\build-server-plugin.xml
     In Eclipse, right click jar.jardesc, choose Create JAR, that will create uniquebuildnumber.jar 
 
