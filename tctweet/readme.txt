@@ -12,7 +12,7 @@ Created - 8/2009
 
 3. Restart the server and the plugin should be loaded automatically
   The stdout_xxx.log should have entry similar to this, once the TeamCity server is started 
-  *** TwitterNotifier adding listener=com.deloitte.acs.TwitterNotifier@ca8f43
+  *** UniqueBuildnumber adding listener=com.deloitte.acs.TwitterNotifier@ca8f43
 
   
   

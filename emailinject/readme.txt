@@ -10,10 +10,9 @@ in order for us to inject our own message into the build result email.
 
 
 Location on the TeamCity server  
-  C:\Documents and Settings\acsbuild\.BuildServer\config\
-
-Location in project
-  \serv_config
+C:\Documents and Settings\acsbuild\.BuildServer\config\
+Location locally 
+\serv_config
 
 
 Created - 8/2009
