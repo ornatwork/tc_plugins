@@ -2,10 +2,6 @@
 package com.deloitte.acs;
 //
 import java.io.*;
-import java.net.Authenticator;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.net.URLConnection;
 //
 import jetbrains.buildServer.serverSide.BuildServerAdapter;
 import jetbrains.buildServer.serverSide.SBuildServer;
@@ -16,7 +12,7 @@ import com.intellij.openapi.diagnostic.Logger;
 //
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
-import twitter4j.conf.*;;
+import twitter4j.conf.ConfigurationBuilder;
 
 
 // Tweets build start / finish to the build account 
