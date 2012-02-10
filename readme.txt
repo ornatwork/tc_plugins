@@ -1,4 +1,19 @@
 
+
+Three plugins for TeamCity,  
+
+emailinject - Allows your build script to inject custom message in the TeamCity email that is sent out after a build.
+
+tctweet - Allows build statuses to be tweeted to a Twitter account.
+
+unique - Allows your builds to share one unique build number counter across multiple projects.
+
+
+
+
+-----------------
+
+
 The workspace in Eclipse has been set to this location / directory in order for some of the project settings to work properly.
 
 
